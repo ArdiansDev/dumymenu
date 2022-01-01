@@ -37,9 +37,7 @@ function MainMenu() {
               menu.childs?.map((child) => (
                 <button
                   disabled={!child.isAllowed}
-                  className={
-                    "flex flex-col bg-white focus:bg-white pl-8 my-2 w-full disabled:text-gray-300  focus:border-l-8 border-red-700 focus:shadow-lg z-10 focus:text-black text-red-500 capitalize"
-                  }
+                  className="flex flex-col bg-white focus:bg-white pl-8 my-2 w-full disabled:text-gray-300  focus:border-l-8 border-red-700 focus:shadow-lg z-10 focus:text-black text-red-500 capitalize"
                 >
                   {child.id}
                 </button>
