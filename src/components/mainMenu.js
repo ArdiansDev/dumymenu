@@ -2,7 +2,8 @@ import React from "react";
 import { editMenu } from "../store/actions/menuActions";
 import { useSelector, useDispatch } from "react-redux";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/solid";
-const MainMenu = () => {
+
+function MainMenu() {
   const dispatch = useDispatch();
   const menus = useSelector((state) => state.menuReducer.menus);
   const showMenu = (menu) => {
@@ -48,6 +49,6 @@ const MainMenu = () => {
       ))}
     </div>
   );
-};
+}
 
 export default MainMenu;

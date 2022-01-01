@@ -1,7 +1,8 @@
 import React from "react";
 import { editAllowMenu, editAllowSubMenu } from "../store/actions/menuActions";
 import { useSelector, useDispatch } from "react-redux";
-const MainView = () => {
+
+function MainView() {
   const dispatch = useDispatch();
   const menus = useSelector((state) => state.menuReducer.menus);
   const allowMenu = (menu) => {
@@ -33,7 +34,7 @@ const MainView = () => {
             >
               <h1 className="flex justify-between">{menu.id}</h1>
             </button>
-            <div className="">
+            <div>
               {menu.childs?.map((child) => (
                 <button
                   onClick={() => allowSubMenu(menu, child)}
@@ -51,6 +52,6 @@ const MainView = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MainView;
